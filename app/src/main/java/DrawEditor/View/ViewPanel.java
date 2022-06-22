@@ -1,8 +1,5 @@
 package DrawEditor.View;
 
-///////////////////////////////////////////////
-// View (V)
-
 import DrawEditor.Controller.DrawController;
 import DrawEditor.Model.DrawModel;
 import DrawEditor.Model.Figure;
