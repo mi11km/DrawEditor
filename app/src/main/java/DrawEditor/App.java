@@ -6,7 +6,7 @@ package DrawEditor;
 import DrawEditor.Controller.DrawController;
 import DrawEditor.Model.DrawModel;
 import DrawEditor.View.ViewDrawPanel;
-import DrawEditor.View.ViewSelectorPanel;
+import DrawEditor.View.ViewSelectButtonsPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,7 +22,7 @@ public class App extends JFrame {
     DrawController drawController = new DrawController(drawModel);
     ViewDrawPanel viewDrawPanel = new ViewDrawPanel(drawModel, drawController);
     this.add(viewDrawPanel, BorderLayout.CENTER);
-    ViewSelectorPanel viewSelectorPanel = new ViewSelectorPanel(drawModel);
+    ViewSelectButtonsPanel viewSelectorPanel = new ViewSelectButtonsPanel(drawModel);
     this.add(viewSelectorPanel, BorderLayout.SOUTH);
 
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
