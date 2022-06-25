@@ -8,24 +8,24 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 public class DrawController implements MouseListener, MouseMotionListener {
-    protected DrawModel model;
+    protected DrawModel drawModel;
     protected int dragStartX, dragStartY;
 
-    public DrawController(DrawModel a) {
-        model = a;
+    public DrawController(DrawModel m) {
+        this.drawModel = m;
     }
 
     public void mouseClicked(MouseEvent e) {
     }
 
     public void mousePressed(MouseEvent e) {
-        dragStartX = e.getX();
-        dragStartY = e.getY();
-        model.createFigure(dragStartX, dragStartY);
+        this.dragStartX = e.getX();
+        this.dragStartY = e.getY();
+        this.drawModel.createFigure(this.dragStartX, this.dragStartY);
     }
 
     public void mouseDragged(MouseEvent e) {
-        model.reshapeFigure(dragStartX, dragStartY, e.getX(), e.getY());
+        this.drawModel.reshapeFigure(this.dragStartX, this.dragStartY, e.getX(), e.getY());
     }
 
     public void mouseReleased(MouseEvent e) {

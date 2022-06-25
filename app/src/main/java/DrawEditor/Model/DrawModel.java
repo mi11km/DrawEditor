@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import java.util.Observable;
 
 @SuppressWarnings("deprecation")
-public
-class DrawModel extends Observable {
+public class DrawModel extends Observable {
     protected ArrayList<Figure> figures;
     protected Figure drawingFigure;
     protected Color currentColor;
@@ -19,10 +18,6 @@ class DrawModel extends Observable {
 
     public ArrayList<Figure> getFigures() {
         return this.figures;
-    }
-
-    public Figure getFigure(int idx) {
-        return this.figures.get(idx);
     }
 
     public void createFigure(int x, int y) {
