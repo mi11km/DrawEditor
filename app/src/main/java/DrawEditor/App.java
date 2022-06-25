@@ -3,14 +3,13 @@
  */
 package DrawEditor;
 
-import DrawEditor.Controller.Controllers;
+import DrawEditor.Controller.DrawController;
 import DrawEditor.Model.DrawModel;
 import DrawEditor.View.ViewDrawPanel;
 import DrawEditor.View.ViewSelectorPanel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Objects;
 
 public class App extends JFrame {
 
@@ -20,10 +19,10 @@ public class App extends JFrame {
     this.setSize(1000, 800);
 
     DrawModel drawModel = new DrawModel();
-    Controllers controllers = new Controllers(drawModel);
-    ViewDrawPanel viewDrawPanel = new ViewDrawPanel(drawModel, controllers.drawController);
+    DrawController drawController = new DrawController(drawModel);
+    ViewDrawPanel viewDrawPanel = new ViewDrawPanel(drawModel, drawController);
     this.add(viewDrawPanel, BorderLayout.CENTER);
-    ViewSelectorPanel viewSelectorPanel = new ViewSelectorPanel(controllers.colorController);
+    ViewSelectorPanel viewSelectorPanel = new ViewSelectorPanel(drawModel);
     this.add(viewSelectorPanel, BorderLayout.SOUTH);
 
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
