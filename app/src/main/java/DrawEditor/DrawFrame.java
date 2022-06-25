@@ -9,7 +9,7 @@ import java.awt.*;
 
 public class DrawFrame extends JFrame {
   public DrawFrame() {
-    this.setBackground(Color.black);
+    this.setBackground(Color.white);
     this.setTitle("Draw Editor");
     this.setSize(1000, 1000);
 
