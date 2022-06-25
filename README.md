@@ -4,7 +4,7 @@ MICS J3 課題のレポート用　ドローエディタGUIアプリケーショ
 
 ## 開発環境
 - Gradle 7.4.2
-- openjdk 18.0.1.1
+- openjdk 8 (class file version 52.0)
 - IntelliJ IDEA(エディタ)
 
 アプリケーションのエントリーポイントは`app/src/main/java/DrawEditor/App.java`
