@@ -22,8 +22,8 @@ public class App extends JFrame {
     DrawController drawController = new DrawController(drawModel);
     ViewDrawPanel viewDrawPanel = new ViewDrawPanel(drawModel, drawController);
     this.add(viewDrawPanel, BorderLayout.CENTER);
-    ViewSelectButtonsPanel viewSelectorPanel = new ViewSelectButtonsPanel(drawModel);
-    this.add(viewSelectorPanel, BorderLayout.SOUTH);
+    ViewSelectButtonsPanel viewSelectButtonsPanel = new ViewSelectButtonsPanel(drawModel);
+    this.add(viewSelectButtonsPanel, BorderLayout.SOUTH);
 
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setVisible(true);

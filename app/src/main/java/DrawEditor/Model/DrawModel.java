@@ -9,7 +9,6 @@ public class DrawModel extends Observable {
   protected ArrayList<Figure> currentFigures;
   protected Figure drawingFigure;
   protected Color currentColor;
-
   protected FiguresEnum selectedFigure;
 
   public DrawModel() {

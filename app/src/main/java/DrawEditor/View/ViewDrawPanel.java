@@ -17,7 +17,6 @@ public class ViewDrawPanel extends JPanel implements Observer {
 
   public ViewDrawPanel(DrawModel m, DrawController c) {
     this.setBackground(Color.white);
-    this.setSize(1000, 1000);
     this.addMouseListener(c);
     this.addMouseMotionListener(c);
 

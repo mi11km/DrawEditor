@@ -10,9 +10,7 @@ import java.awt.event.ActionListener;
 import java.net.URL;
 
 public class ViewSelectButtonsPanel extends JPanel implements ActionListener {
-
   protected DrawModel drawModel;
-
   private final JButton colorSelectButton;
   private final JButton circleFigureSelectButton;
   private final JButton rectangleFigureSelectButton;
@@ -31,13 +29,13 @@ public class ViewSelectButtonsPanel extends JPanel implements ActionListener {
     this.colorSelectButton.addActionListener(this);
     this.add(this.colorSelectButton);
 
-    this.circleFigureSelectButton = new JButton(this.getImageIcon("circle.png"));
-    this.circleFigureSelectButton.addActionListener(this);
-    this.add(this.circleFigureSelectButton);
-
     this.rectangleFigureSelectButton = new JButton(this.getImageIcon("rectangle.png"));
     this.rectangleFigureSelectButton.addActionListener(this);
     this.add(this.rectangleFigureSelectButton);
+
+    this.circleFigureSelectButton = new JButton(this.getImageIcon("circle.png"));
+    this.circleFigureSelectButton.addActionListener(this);
+    this.add(this.circleFigureSelectButton);
   }
 
   @Override
