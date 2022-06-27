@@ -5,8 +5,8 @@ package DrawEditor;
 
 import DrawEditor.Controller.DrawController;
 import DrawEditor.Model.DrawModel;
-import DrawEditor.View.ViewDrawPanel;
-import DrawEditor.View.ViewSelectButtonsPanel;
+import DrawEditor.View.DrawPanelView;
+import DrawEditor.View.SelectButtonsPanelView;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,10 +20,10 @@ public class App extends JFrame {
 
     DrawModel drawModel = new DrawModel();
     DrawController drawController = new DrawController(drawModel);
-    ViewDrawPanel viewDrawPanel = new ViewDrawPanel(drawModel, drawController);
-    this.add(viewDrawPanel, BorderLayout.CENTER);
-    ViewSelectButtonsPanel viewSelectButtonsPanel = new ViewSelectButtonsPanel(drawModel);
-    this.add(viewSelectButtonsPanel, BorderLayout.SOUTH);
+    DrawPanelView drawPanelView = new DrawPanelView(drawModel, drawController);
+    this.add(drawPanelView, BorderLayout.CENTER);
+    SelectButtonsPanelView selectButtonsPanelView = new SelectButtonsPanelView(drawModel);
+    this.add(selectButtonsPanelView, BorderLayout.SOUTH);
 
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setVisible(true);

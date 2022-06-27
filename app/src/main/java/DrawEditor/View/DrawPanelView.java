@@ -12,10 +12,10 @@ import java.util.Observer;
 
 // Viewは，Observerをimplementsする．Modelを監視して，モデルが更新されたらupdateする．実際には，Modelからupdateが呼び出される．
 @SuppressWarnings("deprecation")
-public class ViewDrawPanel extends JPanel implements Observer {
+public class DrawPanelView extends JPanel implements Observer {
   protected DrawModel drawModel;
 
-  public ViewDrawPanel(DrawModel m, DrawController c) {
+  public DrawPanelView(DrawModel m, DrawController c) {
     this.setBackground(Color.white);
     this.addMouseListener(c);
     this.addMouseMotionListener(c);
