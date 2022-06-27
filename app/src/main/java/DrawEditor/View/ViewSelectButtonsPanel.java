@@ -25,15 +25,15 @@ public class ViewSelectButtonsPanel extends JPanel implements ActionListener {
   public ViewSelectButtonsPanel(DrawModel m) {
     this.drawModel = m;
 
-    this.colorSelectButton = new JButton("色の選択", this.getImageIcon("color-picker.png"));
+    this.colorSelectButton = new JButton("Color", this.getImageIcon("color-picker.png"));
     this.colorSelectButton.addActionListener(this);
     this.add(this.colorSelectButton);
 
-    this.rectangleFigureSelectButton = new JButton(this.getImageIcon("rectangle.png"));
+    this.rectangleFigureSelectButton = new JButton("Rect", this.getImageIcon("rectangle.png"));
     this.rectangleFigureSelectButton.addActionListener(this);
     this.add(this.rectangleFigureSelectButton);
 
-    this.circleFigureSelectButton = new JButton(this.getImageIcon("circle.png"));
+    this.circleFigureSelectButton = new JButton("Circle", this.getImageIcon("circle.png"));
     this.circleFigureSelectButton.addActionListener(this);
     this.add(this.circleFigureSelectButton);
   }
