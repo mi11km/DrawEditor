@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
 
-public class SelectButtonsPanelView extends JPanel implements ActionListener {
+public class SelectPanelView extends JPanel implements ActionListener {
   protected DrawModel drawModel;
   private final JButton colorSelectButton;
   private final JButton circleFigureSelectButton;
@@ -22,7 +22,7 @@ public class SelectButtonsPanelView extends JPanel implements ActionListener {
     return new ImageIcon(imageIcon.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
   }
 
-  public SelectButtonsPanelView(DrawModel m) {
+  public SelectPanelView(DrawModel m) {
     this.drawModel = m;
 
     this.colorSelectButton = new JButton("Color", this.getImageIcon("color-picker.png"));
