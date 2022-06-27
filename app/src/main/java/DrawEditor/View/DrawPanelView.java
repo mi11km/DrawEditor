@@ -24,6 +24,7 @@ public class DrawPanelView extends JPanel implements Observer {
     this.drawModel.addObserver(this);
   }
 
+  @Override
   public void paintComponent(Graphics g) {
     super.paintComponent(g);
     ArrayList<Figure> fig = this.drawModel.getFigures();
@@ -32,6 +33,7 @@ public class DrawPanelView extends JPanel implements Observer {
     }
   }
 
+  @Override
   public void update(Observable o, Object arg) {
     repaint();
   }
