@@ -39,7 +39,7 @@ public class DrawModel extends Observable {
     if (this.selectedFigure == FiguresEnum.CIRCLE) {
       f = new CircleFigure(x, y, 0, 0, this.currentColor);
     } else {
-      f = new RectangleFigure(x, y, 0, 0, this.currentColor);
+      f = new RectFigure(x, y, 0, 0, this.currentColor);
     }
     this.currentFigures.add(f);
     this.drawingFigure = f;
