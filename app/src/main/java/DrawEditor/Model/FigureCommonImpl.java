@@ -2,19 +2,17 @@ package DrawEditor.Model;
 
 import java.awt.*;
 
-public class FigureImpl implements Figure {
+public class FigureCommonImpl {
   protected int x, y, width, height;
   protected Color color;
 
-  public FigureImpl(int x, int y, int w, int h, Color c) {
+  public FigureCommonImpl(int x, int y, int w, int h, Color c) {
     this.x = x;
     this.y = y;
     this.width = w;
     this.height = h;
     this.color = c;
   }
-
-  public void draw(Graphics g) {}
 
   public void setSize(int w, int h) {
     this.width = w;
