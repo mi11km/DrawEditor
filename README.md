@@ -47,5 +47,5 @@ java -jar ./app/build/libs/app.jar
 
 ## 設計方針
 - アーキテクチャパターン：MVCモデル
-- デザインパターン：Observerパターン
+- デザインパターン：Observerパターン, Bridgeパターン
 - クラス構成・クラス図

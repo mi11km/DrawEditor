@@ -12,7 +12,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class App extends JFrame {
-
   public App() {
     this.setBackground(Color.white);
     this.setTitle("Draw Editor");
