@@ -14,13 +14,13 @@ public class DrawModel extends Observable {
   /** The Color of figure to draw */
   protected Color currentColor;
   /** The selected figure type to draw */
-  protected FiguresEnum selectedFigure;
+  protected FiguresEnum selectedFigureType;
 
   public DrawModel() {
     this.currentFigures = new ArrayList<Figure>();
     this.drawingFigure = null;
     this.currentColor = Color.BLACK;
-    this.selectedFigure = FiguresEnum.RECTANGLE;
+    this.selectedFigureType = FiguresEnum.RECTANGLE;
   }
 
   public ArrayList<Figure> getFigures() {
@@ -35,8 +35,8 @@ public class DrawModel extends Observable {
     return this.currentColor;
   }
 
-  public void changeFigure(FiguresEnum f) {
-    this.selectedFigure = f;
+  public void setFigureType(FiguresEnum f) {
+    this.selectedFigureType = f;
   }
 
   /**
@@ -47,7 +47,7 @@ public class DrawModel extends Observable {
    */
   public void createFigure(int x, int y) {
     Figure f;
-    if (this.selectedFigure == FiguresEnum.CIRCLE) {
+    if (this.selectedFigureType == FiguresEnum.CIRCLE) {
       f = new CircleFigure(x, y, 0, 0, this.currentColor);
     } else {
       f = new RectFigure(x, y, 0, 0, this.currentColor);

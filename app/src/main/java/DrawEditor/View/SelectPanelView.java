@@ -62,9 +62,9 @@ public class SelectPanelView extends JPanel implements ActionListener {
         this.drawModel.setColor(selectedColor);
       }
     } else if (e.getSource() == this.circleFigureSelectButton) {
-      this.drawModel.changeFigure(FiguresEnum.CIRCLE);
+      this.drawModel.setFigureType(FiguresEnum.CIRCLE);
     } else if (e.getSource() == this.rectangleFigureSelectButton) {
-      this.drawModel.changeFigure(FiguresEnum.RECTANGLE);
+      this.drawModel.setFigureType(FiguresEnum.RECTANGLE);
     }
   }
 }
