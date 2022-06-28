@@ -9,12 +9,22 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
 
+/**
+ * This class is the view(and controller) of draw editor app. It displays buttons GUI to select
+ * figure options. It also changes DrawModel metadata by the button pushed action.
+ */
 public class SelectPanelView extends JPanel implements ActionListener {
   protected DrawModel drawModel;
   private final JButton colorSelectButton;
   private final JButton circleFigureSelectButton;
   private final JButton rectangleFigureSelectButton;
 
+  /**
+   * This method get ImageIcon object from file name.
+   *
+   * @param name the image file name
+   * @return ImageIcon object
+   */
   private ImageIcon getImageIcon(String name) {
     URL colorPickIconImageURL = getClass().getClassLoader().getResource(name);
     assert colorPickIconImageURL != null;
@@ -38,6 +48,11 @@ public class SelectPanelView extends JPanel implements ActionListener {
     this.add(this.circleFigureSelectButton);
   }
 
+  /**
+   * this method changes the DrawModel metadata.
+   *
+   * @param e the button pushed event to be processed
+   */
   @Override
   public void actionPerformed(ActionEvent e) {
     if (e.getSource() == this.colorSelectButton) {

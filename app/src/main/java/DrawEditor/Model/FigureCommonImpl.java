@@ -2,6 +2,10 @@ package DrawEditor.Model;
 
 import java.awt.*;
 
+/**
+ * this class is the implementation of Figure interface. It is for common figures (like rect,
+ * circle...)
+ */
 public class FigureCommonImpl implements Figure {
   protected int x, y, width, height;
   protected Color color;

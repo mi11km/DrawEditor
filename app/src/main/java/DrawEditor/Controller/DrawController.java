@@ -4,6 +4,10 @@ import DrawEditor.Model.DrawModel;
 
 import java.awt.event.*;
 
+/**
+ * This class is the controller of draw editor app. It changes the DrawModel by the action
+ * from the DrawPanelView
+ */
 public class DrawController implements MouseListener, MouseMotionListener {
   protected DrawModel drawModel;
   protected int dragStartX, dragStartY;

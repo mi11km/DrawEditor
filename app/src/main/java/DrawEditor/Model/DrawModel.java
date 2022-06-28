@@ -4,11 +4,16 @@ import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Observable;
 
+/** This class is the model of draw editor. It manages Drawing Model. */
 @SuppressWarnings("deprecation")
 public class DrawModel extends Observable {
+  /** Created figures */
   protected ArrayList<Figure> currentFigures;
+  /** A drawing figure */
   protected Figure drawingFigure;
+  /** The Color of figure to draw */
   protected Color currentColor;
+  /** The selected figure type to draw */
   protected FiguresEnum selectedFigure;
 
   public DrawModel() {
@@ -34,6 +39,12 @@ public class DrawModel extends Observable {
     this.selectedFigure = f;
   }
 
+  /**
+   * This method creates new figure and notify this changes to Observer.
+   *
+   * @param x the x coordinate of the creating figure
+   * @param y the y coordinate of the creating figure
+   */
   public void createFigure(int x, int y) {
     Figure f;
     if (this.selectedFigure == FiguresEnum.CIRCLE) {
@@ -47,6 +58,9 @@ public class DrawModel extends Observable {
     notifyObservers();
   }
 
+  /**
+   * This method reshape the drawing figure and notify this changes to Observer.
+   */
   public void reshapeFigure(int x1, int y1, int x2, int y2) {
     if (this.drawingFigure != null) {
       this.drawingFigure.reshape(x1, y1, x2, y2);
