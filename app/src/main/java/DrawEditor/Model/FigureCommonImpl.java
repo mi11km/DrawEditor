@@ -14,12 +14,12 @@ public class FigureCommonImpl {
     this.color = c;
   }
 
-  public void setSize(int w, int h) {
+  private void setSize(int w, int h) {
     this.width = w;
     this.height = h;
   }
 
-  public void setLocation(int x, int y) {
+  private void setLocation(int x, int y) {
     this.x = x;
     this.y = y;
   }
@@ -29,7 +29,7 @@ public class FigureCommonImpl {
     int newY = Math.min(y1, y2);
     int newWidth = Math.abs(x1 - x2);
     int newHeight = Math.abs(y1 - y2);
-    setLocation(newX, newY);
-    setSize(newWidth, newHeight);
+    this.setLocation(newX, newY);
+    this.setSize(newWidth, newHeight);
   }
 }
