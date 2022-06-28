@@ -2,7 +2,7 @@ package DrawEditor.Model;
 
 import java.awt.*;
 
-public class FigureCommonImpl {
+public class FigureCommonImpl implements Figure {
   protected int x, y, width, height;
   protected Color color;
 
@@ -24,6 +24,10 @@ public class FigureCommonImpl {
     this.y = y;
   }
 
+  @Override
+  public void draw(Graphics g) {}
+
+  @Override
   public void reshape(int x1, int y1, int x2, int y2) {
     int newX = Math.min(x1, x2);
     int newY = Math.min(y1, y2);
